@@ -12,7 +12,8 @@ namespace BarberShop.Infraestructure.DependencyInjection
     {
         public static IServiceCollection AddDbContext(this IServiceCollection services, IConfiguration configuration){
             services.AddDbContext<BarberShopContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("BarberShopDatabase")));
+            options.UseSqlServer(configuration.GetConnectionString("BarberShopDatabase"), 
+                b => b.MigrationsAssembly(typeof(BarberShopContext).Assembly.FullName)));
             return services;
         }
 

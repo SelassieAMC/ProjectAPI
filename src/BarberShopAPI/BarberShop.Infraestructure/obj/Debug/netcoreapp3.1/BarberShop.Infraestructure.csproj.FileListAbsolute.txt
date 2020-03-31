@@ -9,3 +9,5 @@ C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\Bar
 C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Infraestructure\obj\Debug\netcoreapp3.1\BarberShop.Infraestructure.csproj.CopyComplete
 C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Infraestructure\obj\Debug\netcoreapp3.1\BarberShop.Infraestructure.dll
 C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Infraestructure\obj\Debug\netcoreapp3.1\BarberShop.Infraestructure.pdb
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Infraestructure\bin\Debug\netcoreapp3.1\BarberShop.Infraestructure.runtimeconfig.json
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Infraestructure\bin\Debug\netcoreapp3.1\BarberShop.Infraestructure.runtimeconfig.dev.json
