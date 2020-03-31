@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using BarberShopAPI.Extensions.DependencyInjection;
+using BarberShopAPI.Core.Interfaces;
+using BarberShopAPI.Infraestructure.Services;
+using BarberShopAPI.Core.Entities;
 
 namespace BarberShopAPI
 {
@@ -28,6 +31,7 @@ namespace BarberShopAPI
         {
             services.AddDbContext(Configuration);
             services.AddControllers();
+            services.AddScoped<IRepository<DocumentType>,Repository<DocumentType>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
