@@ -1,5 +1,5 @@
-test/BarberShipAPI.API.Test/obj/
-test/BarberShipAPI.API.Test/bin/
-src/BarberShopAPI/obj/
 .vs/
-src/BarberShopAPI/obj/*
+bin
+obj
+
+
