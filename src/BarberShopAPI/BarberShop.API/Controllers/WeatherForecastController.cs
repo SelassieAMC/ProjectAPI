@@ -21,12 +21,14 @@ namespace BarberShop.API.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
-        private readonly IRepository<DocumentType> _repo;
+        private readonly IRepository<DocumentType> _docRepo;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IRepository<DocumentType> repository)
+        public WeatherForecastController(
+            ILogger<WeatherForecastController> logger, 
+            IRepository<DocumentType> repository)
         {
             _logger = logger;
-            _repo = repository;
+            _docRepo = repository;
         }
 
         [HttpGet]
@@ -45,7 +47,7 @@ namespace BarberShop.API.Controllers
         [HttpGet]
         public IEnumerable<DocumentType> GetDocumentTypes()
         {
-            return _repo.GetAll();
+            return _docRepo.GetAll();
         }
     }
 }
