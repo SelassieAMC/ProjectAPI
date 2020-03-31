@@ -5,7 +5,7 @@ namespace BarberShopAPI.Core.Entities
 {
     public class Category :DictionaryEntity
     {
-        public ICollection<Service> CategoryServices { get; set; } = new HashSet<Service>();
-        public ICollection<Clasification> CategoryClasifications { get; set; } = new HashSet<Clasification>();
+        public ICollection<ServiceCategory> CategoryServices { get; set; } = new HashSet<ServiceCategory>();
+        public ICollection<ClasificationCategory> CategoryClasifications { get; set; } = new HashSet<ClasificationCategory>();
     }
 }
