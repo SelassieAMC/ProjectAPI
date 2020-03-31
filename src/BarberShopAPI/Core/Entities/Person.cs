@@ -5,7 +5,7 @@ namespace BarberShopAPI.Core.Entities
 {
     public class Person : AuditableEntity
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public int DocumentTypeID { get; set; }
         public DocumentType DocumentType { get; set; }
         public string IdNum { get; set; }

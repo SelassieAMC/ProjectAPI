@@ -63,11 +63,12 @@ namespace BarberShopAPI.Infraestructure.Persistence
 
                 es.HasOne(es => es.Employee)
                     .WithMany(e => e.Subordinates)
-                    .HasForeignKey(es => es.EmployeeID);
+                    .HasForeignKey(es => es.EmployeeID)
+                    .OnDelete(DeleteBehavior.NoAction);
 
-                es.HasOne (es => es.Subordinate)
-                    .WithMany(s => s.Subordinates)
-                    .HasForeignKey(es => es.subordinateID);
+                // es.HasOne (es => es.Subordinate)
+                //     .WithMany(s => s.Subordinates)
+                //     .HasForeignKey(es => es.subordinateID);
             });
 
             modelBuilder.Entity<ServiceEmployee>( se => {
@@ -95,7 +96,7 @@ namespace BarberShopAPI.Infraestructure.Persistence
             });
 
             modelBuilder.Entity<ClasificationCategory>(cc => {
-                cc.HasOne(cc => new {cc.ClasificationID, cc.CategoryID});
+                cc.HasKey(cc => new {cc.ClasificationID, cc.CategoryID});
 
                 cc.HasOne(cc => cc.Clasification)
                     .WithMany(c => c.ClasificationCategories)
