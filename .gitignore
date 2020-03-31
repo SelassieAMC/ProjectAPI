@@ -1,5 +1,5 @@
-.vs/BarberShopAPI/v16/Server/sqlite3/db.lock
-.vs/BarberShopAPI/v16/Server/sqlite3/storage.ide-wal
-.vs/BarberShopAPI/v16/Server/sqlite3/storage.ide
-.vs/BarberShopAPI/v16/Server/sqlite3/storage.ide-wal
-.vs/BarberShopAPI/v16/Server/sqlite3/storage.ide-wal
+test/BarberShipAPI.API.Test/obj/
+test/BarberShipAPI.API.Test/bin/
+src/BarberShopAPI/obj/
+.vs/
+src/BarberShopAPI/obj/*
