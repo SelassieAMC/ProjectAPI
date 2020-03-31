@@ -4,7 +4,7 @@ namespace BarberShopAPI.Core.Entities
     {
         public int ServiceID { get; set; }
         public Service Service { get; set; }
-        public int EmployeeID { get; set; }
+        public long EmployeeID { get; set; }
         public Employee Employee { get; set; }
     }
 }
