@@ -8,14 +8,17 @@ namespace BarberShopAPI.Core.Entities
     {
         public Employee()
         {
-            Subordinates = new HashSet<Employee>();
-            QualifiedServices = new HashSet<Service>();
+            Subordinates = new HashSet<EmployeeSubordinate>();
+            QualifiedServices = new HashSet<ServiceEmployee>();
+            EmployeeRoles = new HashSet<EmployeeRole>();
         }
         public long Id { get; set; }
         public DateTime? LastService { get; set; }
         public int PersonID { get; set; }
         public Person Person { get; set; }
-        public ICollection<Employee> Subordinates { get; set; }
-        public ICollection<Service> QualifiedServices {get; set; }        
+        public ICollection<EmployeeSubordinate> Subordinates { get; set; }
+        public ICollection<ServiceEmployee> QualifiedServices {get; set; }     
+        public ICollection<EmployeeRole> EmployeeRoles { get; set; }
+        public ICollection<Catalog> EmployeeCatalogs { get; set; } = new HashSet<Catalog>();
     }
 }

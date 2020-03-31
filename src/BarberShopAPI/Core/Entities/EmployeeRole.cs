@@ -1,8 +1,7 @@
 namespace BarberShopAPI.Core.Entities
 {
-    public class EmployeeRoles
+    public class EmployeeRole
     {
-        public int Id { get; set; }
         public int EmployeeID { get; set; }
         public Employee Employee { get; set; }
         public int RoleID { get; set; }

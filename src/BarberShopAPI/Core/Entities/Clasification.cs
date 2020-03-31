@@ -5,6 +5,7 @@ namespace BarberShopAPI.Core.Entities
 {
     public class Clasification : DictionaryEntity
     {
-        ICollection<Category> ClasificationCategories { get; set; } = new HashSet<Category>();
+        public ICollection<ClasificationCategory> ClasificationCategories { get; set; } = new HashSet<ClasificationCategory>();
+        public ICollection<Catalog> ClasificationCatalogs { get; set; } = new HashSet<Catalog>();
     }
 }

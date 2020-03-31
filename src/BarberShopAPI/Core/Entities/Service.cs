@@ -7,12 +7,12 @@ namespace BarberShopAPI.Core.Entities
     {
         public Service()
         {
-            ServiceCategories = new HashSet<Category>();
-            QualifiedEmployees = new HashSet<Employee>();
+            ServiceCategories = new HashSet<ServiceCategory>();
+            QualifiedEmployees = new HashSet<ServiceEmployee>();
         }
         public float TimeSpend { get; set; }
         public int Price { get; set; }
-        public ICollection<Category> ServiceCategories { get; set; }
-        public ICollection<Employee> QualifiedEmployees {get; set; }  
+        public ICollection<ServiceCategory> ServiceCategories { get; set; }
+        public ICollection<ServiceEmployee> QualifiedEmployees {get; set; }  
     }
 }
