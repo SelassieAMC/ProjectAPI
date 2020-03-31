@@ -1,6 +1,6 @@
-namespace BarberShopAPI.Core.Common
+namespace BarberShopAPI.Models.Common
 {
-    public class DictionaryEntity : AuditableEntity
+    public class DictionaryDto : AuditableDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
