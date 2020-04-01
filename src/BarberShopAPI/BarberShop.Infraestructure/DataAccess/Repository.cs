@@ -4,7 +4,7 @@ using BarberShop.Core.Interfaces;
 using BarberShop.Infraestructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
-namespace BarberShop.Infraestructure.Services
+namespace BarberShop.Infraestructure.DataAccess
 {
     public class Repository<T> : IRepository<T> where T : class
     {

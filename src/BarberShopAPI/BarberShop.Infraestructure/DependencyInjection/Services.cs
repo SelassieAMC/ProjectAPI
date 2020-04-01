@@ -1,10 +1,14 @@
-using Microsoft.EntityFrameworkCore;
-using BarberShop.Infraestructure.Persistence;
-using BarberShop.Infraestructure.Services;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using BarberShop.Core.Entities;
 using BarberShop.Core.Interfaces;
+using BarberShop.Infraestructure.DataAccess;
+using BarberShop.Infraestructure.Persistence;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace BarberShop.Infraestructure.DependencyInjection
 {
@@ -19,8 +23,23 @@ namespace BarberShop.Infraestructure.DependencyInjection
 
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
+            IEnumerable<string> contextDbSets = GetAllDbSet(services);
+            
             services.AddScoped<IRepository<DocumentType>, Repository<DocumentType>>();
+            services.AddScoped<IRepository<Service>, Repository<Service>>();
+            services.AddScoped<IRepository<Person>, Repository<Person>>();
+            services.AddScoped<IRepository<Employee>, Repository<Employee>>();
+            services.AddScoped<IRepository<Customer>, Repository<Customer>>();
             return services;
+        }
+
+        private static IQueryable<string> GetAllDbSet(IServiceCollection services)
+        {
+            var serviceDbContext = services.Where( s => s.ImplementationType?.Name == "BarberShopContext").SingleOrDefault();
+            
+            IQueryable<string> entities = serviceDbContext.ImplementationType.GetProperties().Where(x => x.CanWrite).Select(x => x.Name).AsQueryable();
+
+            return entities;
         }
     }
 }
