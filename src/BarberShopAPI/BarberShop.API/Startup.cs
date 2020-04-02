@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BarberShop.API.Extensions;
 using BarberShop.Infraestructure.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,7 +28,8 @@ namespace BarberShopAPI
         {
             services.AddDbContext(Configuration);
             services.AddControllers();
-            services.AddServices();
+            services.AddRepositories();
+            services.AddSwaggerDoc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,11 +39,11 @@ namespace BarberShopAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
+            
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
