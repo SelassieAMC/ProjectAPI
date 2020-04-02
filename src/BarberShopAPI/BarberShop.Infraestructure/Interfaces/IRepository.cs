@@ -1,6 +1,6 @@
 using System;
 
-namespace BarberShop.Core.Interfaces
+namespace BarberShop.Infraestructure.Interfaces
 {
     public interface IRepository<T> : IDisposable, IReadOnlyRepository<T>, IWriteOnlyRepository<T>
     {

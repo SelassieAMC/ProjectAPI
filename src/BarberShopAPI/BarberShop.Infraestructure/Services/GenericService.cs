@@ -1,5 +1,5 @@
 using System.Linq;
-using BarberShop.Core.Interfaces;
+using BarberShop.Infraestructure.Interfaces;
 
 namespace BarberShop.Infraestructure.Services
 {

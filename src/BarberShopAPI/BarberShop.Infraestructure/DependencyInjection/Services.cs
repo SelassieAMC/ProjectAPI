@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using BarberShop.Core.Entities;
-using BarberShop.Core.Interfaces;
+using BarberShop.Infraestructure.Interfaces;
 using BarberShop.Infraestructure.DataAccess;
 using BarberShop.Infraestructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -23,23 +23,35 @@ namespace BarberShop.Infraestructure.DependencyInjection
 
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
-            IEnumerable<string> contextDbSets = GetAllDbSet(services);
-            
-            services.AddScoped<IRepository<DocumentType>, Repository<DocumentType>>();
-            services.AddScoped<IRepository<Service>, Repository<Service>>();
-            services.AddScoped<IRepository<Person>, Repository<Person>>();
-            services.AddScoped<IRepository<Employee>, Repository<Employee>>();
-            services.AddScoped<IRepository<Customer>, Repository<Customer>>();
+            var contextDbSets = GetAllDbSet(services);
+
+            foreach(var entityName in contextDbSets){
+                var fullname = entityName;
+                var type = Type.GetType(fullname);
+                AddRepoService(services, type);
+            }
             return services;
         }
 
-        private static IQueryable<string> GetAllDbSet(IServiceCollection services)
+        private static void AddRepoService(IServiceCollection services, Type type)
         {
-            var serviceDbContext = services.Where( s => s.ImplementationType?.Name == "BarberShopContext").SingleOrDefault();
-            
-            IQueryable<string> entities = serviceDbContext.ImplementationType.GetProperties().Where(x => x.CanWrite).Select(x => x.Name).AsQueryable();
+            var serviceType = typeof(Repository<>).MakeGenericType(type);
+            var iServiceType = typeof(IRepository<>).MakeGenericType(type);
+            services.AddScoped(iServiceType, serviceType);
+        }
 
-            return entities;
+        private static IEnumerable<string> GetAllDbSet(IServiceCollection services)
+        {
+            var dbEntities = new List<string>();
+            var serviceDbContext = services.Where( s => s.ImplementationType?.Name == typeof(BarberShopContext).Name).SingleOrDefault();
+
+            var properties = serviceDbContext.ImplementationType.GetProperties().Where(x => x.CanWrite);
+            foreach(var property in properties){
+                var assemblyName = property.PropertyType.FullName.Split("[[")[1].Split("]]")[0];
+                dbEntities.Add(assemblyName);
+            }
+
+            return dbEntities;
         }
     }
 }

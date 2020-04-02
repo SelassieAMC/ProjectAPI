@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BarberShop.Core.Entities;
-using BarberShop.Core.Interfaces;
+using BarberShop.Infraestructure.Interfaces;
 using BarberShop.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -22,13 +22,16 @@ namespace BarberShop.API.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly IRepository<DocumentType> _docRepo;
+        private readonly IRepository<Service> _servRepo;
 
         public WeatherForecastController(
             ILogger<WeatherForecastController> logger, 
-            IRepository<DocumentType> repository)
+            IRepository<DocumentType> repository,
+            IRepository<Service> repoService)
         {
             _logger = logger;
             _docRepo = repository;
+            _servRepo = repoService;
         }
 
         [HttpGet]
@@ -48,6 +51,12 @@ namespace BarberShop.API.Controllers
         public IEnumerable<DocumentType> GetDocumentTypes()
         {
             return _docRepo.GetAll();
+        }
+
+        [HttpGet]
+        public IEnumerable<Service> GetServices()
+        {
+            return _servRepo.GetAll();
         }
     }
 }

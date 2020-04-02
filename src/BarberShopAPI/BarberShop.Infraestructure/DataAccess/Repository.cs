@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using BarberShop.Core.Interfaces;
+using BarberShop.Infraestructure.Interfaces;
 using BarberShop.Infraestructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 

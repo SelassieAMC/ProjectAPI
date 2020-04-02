@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace BarberShop.Core.Interfaces
+namespace BarberShop.Infraestructure.Interfaces
 {
     public interface IReadOnlyRepository<out T> : IDisposable
     {
