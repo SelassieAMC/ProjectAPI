@@ -52,3 +52,16 @@ C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\Bar
 C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\obj\Debug\netcoreapp3.1\BarberShopAPI.csproj.CopyComplete
 C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\obj\Debug\netcoreapp3.1\BarberShopAPI.dll
 C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\obj\Debug\netcoreapp3.1\BarberShopAPI.pdb
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\bin\Debug\netcoreapp3.1\Namotion.Reflection.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\bin\Debug\netcoreapp3.1\NJsonSchema.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\bin\Debug\netcoreapp3.1\NSwag.Annotations.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\bin\Debug\netcoreapp3.1\NSwag.AspNetCore.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\bin\Debug\netcoreapp3.1\NSwag.Core.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\bin\Debug\netcoreapp3.1\NSwag.Generation.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\bin\Debug\netcoreapp3.1\NSwag.Generation.AspNetCore.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.API\obj\Debug\netcoreapp3.1\BarberShopAPI.MvcApplicationPartsAssemblyInfo.cs

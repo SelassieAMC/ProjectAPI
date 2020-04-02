@@ -21,7 +21,7 @@ namespace BarberShop.Infraestructure.DependencyInjection
             return services;
         }
 
-        public static IServiceCollection AddServices(this IServiceCollection services)
+        public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             var contextDbSets = GetAllDbSet(services);
 
