@@ -13,4 +13,10 @@
     <PackageReference Include="coverlet.collector" Version="1.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\BarberShopAPI\BarberShop.API\BarberShopAPI.csproj" />
+    <ProjectReference Include="..\..\..\src\BarberShopAPI\BarberShop.Core\BarberShop.Core.csproj" />
+    <ProjectReference Include="..\..\..\src\BarberShopAPI\BarberShop.Infraestructure\BarberShop.Infraestructure.csproj" />
+  </ItemGroup>
+
 </Project>
