@@ -1,0 +1,8 @@
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Core\bin\Debug\netcoreapp3.1\BarberShop.Core.deps.json
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Core\bin\Debug\netcoreapp3.1\BarberShop.Core.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Core\bin\Debug\netcoreapp3.1\BarberShop.Core.pdb
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Core\obj\Debug\netcoreapp3.1\BarberShop.Core.AssemblyInfoInputs.cache
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Core\obj\Debug\netcoreapp3.1\BarberShop.Core.AssemblyInfo.cs
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Core\obj\Debug\netcoreapp3.1\BarberShop.Core.dll
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Core\obj\Debug\netcoreapp3.1\BarberShop.Core.pdb
+C:\Users\aclavijo\Documents\Privado\Projects\BarberShopAPI\src\BarberShopAPI\BarberShop.Core\obj\Debug\netcoreapp3.1\BarberShop.Core.csprojAssemblyReference.cache

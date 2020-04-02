@@ -1,5 +1,6 @@
-test/BarberShipAPI.API.Test/obj/
-test/BarberShipAPI.API.Test/bin/
-src/BarberShopAPI/obj/
 .vs/
-src/BarberShopAPI/obj/*
+bin
+obj
+
+
+src/BarberShopAPI/BarberShop.API/bin/Debug/netcoreapp3.1/BarberShop.Infraestructure.dll
