@@ -3,11 +3,11 @@ using BarberShop.Infraestructure.Interfaces;
 
 namespace BarberShop.Infraestructure.Services
 {
-    public abstract class GenericService<T>
+    public abstract class GenericRepoService<T>
     {
         private readonly IRepository<T> _repo;
 
-        public GenericService(IRepository<T> repo)
+        public GenericRepoService(IRepository<T> repo)
         {
             _repo = repo;
         }
