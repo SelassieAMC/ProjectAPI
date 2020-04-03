@@ -1,21 +1,14 @@
 ﻿using BarberShop.Core.Entities;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace BarberShop.API.Test.Mockings
+namespace BarberShop.API.Test.TestData
 {
-    public class BaseTest
+    public static class ServicesTestData
     {
-        //IRepository<Service> fake = new FakeServiceRepository();
-        public BaseTest()
-        {
-            PopulateInitalData();
-        }
-
-        private void PopulateInitalData()
-        {
-            FakeServiceRepository.services = 
-                new List<Service>(){
+        public static List<Service> testPeople =
+            new List<Service>(){
                     new Service() {
                         Id = 1,
                         Created = DateTime.Now,
@@ -35,6 +28,5 @@ namespace BarberShop.API.Test.Mockings
                         TimeSpend = 1
                     }
                 };
-        }
     }
 }
